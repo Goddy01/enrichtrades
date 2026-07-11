@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import FadeIn from '../FadeIn';
-import { REVIEWS, type Review } from '../../data/content';
+import { REVIEWS, STATS, type Review } from '../../data/content';
 import { EASE_OUT, hoverLift } from '../../lib/motion';
 
 function StarRating({ rating }: { rating: number }) {
@@ -61,6 +61,9 @@ export default function ReviewsSection() {
           Reviews
         </h2>
         <p className="mx-auto mb-3 max-w-xl text-center text-sm font-medium uppercase tracking-widest text-bull/55">
+          {STATS.members} members who are winning
+        </p>
+        <p className="mx-auto mb-3 max-w-xl text-center text-sm font-light uppercase tracking-widest text-bull/45">
           Verified reviews from Whop
         </p>
         <p className="mx-auto mb-12 max-w-xl text-center text-sm font-light uppercase tracking-widest text-bull/40 sm:mb-14">
