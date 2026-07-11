@@ -17,7 +17,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center bg-cream px-5 py-20 sm:px-8 md:px-10"
+      className="relative mt-16 flex min-h-screen flex-col items-center justify-center bg-cream px-5 py-20 sm:mt-20 sm:px-8 sm:py-24 md:mt-24 md:px-10 md:py-32"
     >
       {DECO_CONFIG.map(({ Icon, delay, x, floatDelay, className }, i) => (
         <FadeIn
