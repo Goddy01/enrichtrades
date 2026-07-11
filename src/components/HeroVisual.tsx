@@ -6,8 +6,8 @@ export default function HeroVisual() {
 
   const image = (
     <img
-      src="/enrichtrades-logo.webp"
-      alt="Enrich Trades bull logo"
+      src="/final-hero-image.png"
+      alt="Trader celebrating success at the mountain peak"
       className="hero-bull-image h-auto w-full max-w-none select-none object-contain max-sm:w-[98vw] sm:max-w-[500px] lg:max-w-[580px] xl:max-w-[660px]"
       draggable={false}
     />
