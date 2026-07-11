@@ -1,0 +1,18 @@
+export const TICKER_SYMBOLS = [
+  'NVDA',
+  'SPY',
+  'RKLB',
+  'META',
+  'TSLA',
+  'AAPL',
+  'IONQ',
+  'CRWD',
+  'PLTR',
+  'HOOD',
+  'AMD',
+  'MSFT',
+  'GOOGL',
+  'AMZN',
+  'SNOW',
+  'ASTS',
+] as const;
