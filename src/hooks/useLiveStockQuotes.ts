@@ -40,9 +40,7 @@ function parseQuote(symbol: string, entry: YahooSparkEntry): StockQuote | null {
 
 async function fetchQuotes(symbols: readonly string[]): Promise<StockQuote[]> {
   const query = symbols.join(',');
-  const endpoint = import.meta.env.DEV
-    ? `/api/stock-quotes?symbols=${encodeURIComponent(query)}`
-    : `https://query1.finance.yahoo.com/v8/finance/spark?symbols=${encodeURIComponent(query)}`;
+  const endpoint = `/api/stock-quotes?symbols=${encodeURIComponent(query)}`;
   const response = await fetch(endpoint);
 
   if (!response.ok) {
