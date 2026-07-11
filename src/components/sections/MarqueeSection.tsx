@@ -15,10 +15,10 @@ function TickerTile({ sym, pct, note }: { sym: string; pct: string; note: string
   const tile = (
     <div className="relative flex h-[270px] w-[420px] shrink-0 flex-col justify-between rounded-sm border border-bull/10 bg-cream-alt p-6 transition-colors hover:border-bull/20">
       <div>
-        <p className="font-mono text-3xl font-black text-bull">{sym}</p>
+        <p className="font-mono text-3xl font-bold tracking-wide text-bull">{sym}</p>
         <p className="mt-2 text-sm font-light uppercase tracking-wide text-bull/50">{note}</p>
       </div>
-      <p className={`text-4xl font-black ${isGreenCandle ? 'text-candle' : 'text-bull'}`}>{pct}</p>
+      <p className={`text-4xl font-bold tabular-nums ${isGreenCandle ? 'text-candle' : 'text-bull'}`}>{pct}</p>
     </div>
   );
 
@@ -47,15 +47,10 @@ export default function MarqueeSection() {
   return (
     <section
       ref={sectionRef}
-      className="overflow-x-clip bg-cream pb-10 pt-24 sm:pt-32 md:pt-40"
+      className="section-y overflow-x-clip bg-cream"
     >
-      <FadeIn delay={0} y={24} className="mb-10 px-5 text-center sm:mb-12 sm:px-8">
-        <h2
-          className="font-black uppercase text-bull"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
-          Track Record
-        </h2>
+      <FadeIn delay={0} y={24} className="section-x heading-gap text-center">
+        <h2 className="display-heading">Track Record</h2>
       </FadeIn>
 
       <div className="flex flex-col gap-3">

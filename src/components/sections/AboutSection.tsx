@@ -17,7 +17,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="relative mt-32 flex min-h-screen flex-col items-center justify-center bg-cream px-5 pt-32 pb-20 sm:mt-40 sm:px-8 sm:pt-40 sm:pb-24 md:mt-48 md:px-10 md:pt-48 md:pb-32"
+      className="section-x section-y relative flex min-h-screen flex-col items-center justify-center bg-cream"
     >
       {DECO_CONFIG.map(({ Icon, delay, x, floatDelay, className }, i) => (
         <FadeIn
@@ -33,10 +33,7 @@ export default function AboutSection() {
       ))}
 
       <div className="relative z-10 flex flex-col items-center gap-10 sm:gap-14 md:gap-16">
-        <h2
-          className="text-center font-black uppercase leading-none tracking-tight text-bull"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
+        <h2 className="display-heading text-center">
           <RevealLines lines={['About']} delay={0.1} />
         </h2>
 

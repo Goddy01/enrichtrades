@@ -26,9 +26,49 @@ body,
   color: var(--color-bull);
 }
 
+html {
+  scroll-padding-top: 46px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  html {
+  html:not(.lenis) {
     scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-x {
+    @apply px-5 sm:px-8 md:px-10;
+  }
+
+  .section-y {
+    @apply py-24 sm:py-32 md:py-40;
+  }
+
+  .section-y-tight {
+    @apply py-16 sm:py-20;
+  }
+
+  .heading-gap {
+    @apply mb-8 sm:mb-10;
+  }
+
+  .display-heading {
+    font-size: clamp(3rem, 12vw, 160px);
+    @apply font-black uppercase leading-none tracking-tight text-bull;
+  }
+
+  .display-number {
+    font-size: clamp(3rem, 10vw, 140px);
+    @apply font-black leading-none tabular-nums;
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-medium uppercase tracking-[0.18em] text-bull/55;
+  }
+
+  .section-meta {
+    @apply text-sm font-light uppercase tracking-widest text-bull/45;
   }
 }
 

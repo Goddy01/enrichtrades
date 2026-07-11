@@ -2,7 +2,7 @@ import FadeIn from './FadeIn';
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 border-t border-bull/10 bg-[#F3E9DA] px-5 py-12 sm:px-8 sm:py-14 md:px-10">
+    <footer className="section-x section-y-tight relative z-10 border-t border-bull/10 bg-[#F3E9DA]">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 text-center">
         <FadeIn delay={0} y={20}>
           <a href="#" className="inline-flex items-center transition-opacity hover:opacity-80">

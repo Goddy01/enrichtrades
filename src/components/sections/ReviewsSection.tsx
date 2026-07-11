@@ -1,7 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import FadeIn from '../FadeIn';
-import { REVIEWS, STATS, type Review } from '../../data/content';
+import WhopStats from '../WhopStats';
+import { REVIEWS, type Review } from '../../data/content';
 import { EASE_OUT, hoverLift } from '../../lib/motion';
 
 function StarRating({ rating }: { rating: number }) {
@@ -24,7 +25,7 @@ function ReviewCard({ review }: { review: Review }) {
   const card = (
     <article className="flex h-[400px] w-[340px] shrink-0 flex-col rounded-sm border border-bull/10 bg-cream-alt p-6 transition-colors hover:border-bull/20 sm:w-[380px]">
       <div className="mb-4 flex shrink-0 items-center justify-between gap-3">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-bull">{review.author}</h3>
+        <h3 className="text-sm font-medium uppercase tracking-wide text-bull">{review.author}</h3>
         <StarRating rating={review.rating} />
       </div>
       <p className="min-h-0 flex-1 overflow-y-auto pr-1 text-sm font-light leading-relaxed text-bull/70">
@@ -51,23 +52,18 @@ export default function ReviewsSection() {
   return (
     <section
       id="reviews"
-      className="relative z-10 overflow-x-clip border-t border-bull/10 bg-cream py-20 sm:py-24 md:py-32"
+      className="section-x section-y relative z-10 overflow-x-clip border-t border-bull/10 bg-cream"
     >
-      <FadeIn delay={0} y={30} className="px-5 sm:px-8 md:px-10">
-        <h2
-          className="mb-4 text-center font-black uppercase text-bull"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
-          Reviews
-        </h2>
-        <p className="mx-auto mb-3 max-w-xl text-center text-sm font-medium uppercase tracking-widest text-bull/55">
-          {STATS.members} members who are winning
+      <FadeIn delay={0} y={30}>
+        <h2 className="display-heading heading-gap text-center">Reviews</h2>
+        <p className="section-eyebrow mx-auto mb-3 max-w-xl text-center">
+          <WhopStats variant="reviews-members" />
         </p>
-        <p className="mx-auto mb-3 max-w-xl text-center text-sm font-light uppercase tracking-widest text-bull/45">
+        <p className="section-meta mx-auto mb-3 max-w-xl text-center">
           Verified reviews from Whop
         </p>
-        <p className="mx-auto mb-12 max-w-xl text-center text-sm font-light uppercase tracking-widest text-bull/40 sm:mb-14">
-          4.9 on Whop · 90 ratings
+        <p className="section-meta mx-auto mb-12 max-w-xl text-center text-bull/40 sm:mb-14">
+          <WhopStats variant="reviews-ratings" />
         </p>
       </FadeIn>
 

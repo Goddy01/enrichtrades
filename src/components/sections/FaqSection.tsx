@@ -64,15 +64,10 @@ export default function FaqSection() {
   return (
     <section
       id="faq"
-      className="relative z-10 border-t border-bull/10 bg-cream-alt px-5 py-20 sm:px-8 sm:py-24 md:px-10 md:py-32"
+      className="section-x section-y relative z-10 border-t border-bull/10 bg-cream-alt"
     >
       <FadeIn delay={0} y={30}>
-        <h2
-          className="mb-10 text-center font-black uppercase text-bull sm:mb-12"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
-          FAQS
-        </h2>
+        <h2 className="display-heading heading-gap text-center">FAQS</h2>
       </FadeIn>
 
       <StaggerReveal className="mx-auto max-w-3xl" stagger={0.08}>

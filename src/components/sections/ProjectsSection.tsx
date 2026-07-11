@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
 import LiveProjectButton from '../LiveProjectButton';
 import FadeIn from '../FadeIn';
+import PanelValue from '../PanelValue';
 import RevealLines from '../RevealLines';
 import { PROJECTS, type ProjectData } from '../../data/content';
 import { EASE_PREMIUM } from '../../lib/motion';
@@ -21,7 +22,9 @@ function PanelGrid({ panels }: { panels: ProjectData['panels'] }) {
           >
             <p className="text-xs font-medium uppercase tracking-widest text-bull/50">{panel.label}</p>
             <div>
-              <p className="hero-heading text-2xl font-black text-candle sm:text-3xl">{panel.value}</p>
+              <p className="hero-heading text-2xl font-bold tabular-nums text-candle sm:text-3xl">
+                <PanelValue value={panel.value} />
+              </p>
               {panel.sub && (
                 <p className="mt-1 font-mono text-[10px] uppercase tracking-wider text-bull/40 sm:text-xs">
                   {panel.sub}
@@ -81,10 +84,7 @@ function ProjectCard({
         <div className="rounded-sm border-2 border-bull/15 bg-cream-alt p-4 sm:rounded-md sm:p-6 md:p-8">
           <div className="mb-4 flex flex-col gap-4 sm:mb-6 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex flex-wrap items-end gap-4 sm:gap-6">
-              <span
-                className="hero-heading font-black leading-none text-bull"
-                style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
-              >
+              <span className="display-number text-bull">
                 {project.number}
               </span>
               <div>
@@ -119,13 +119,10 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative z-10 -mt-10 rounded-t-[40px] bg-cream px-5 py-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:py-24 md:-mt-14 md:rounded-t-[60px] md:px-10"
+      className="section-x section-y relative z-10 -mt-10 rounded-t-[40px] bg-cream sm:-mt-12 sm:rounded-t-[50px] md:-mt-14 md:rounded-t-[60px]"
     >
       <FadeIn delay={0} y={36}>
-        <h2
-          className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
+        <h2 className="display-heading heading-gap text-center">
           <RevealLines lines={['Plays']} delay={0.05} />
         </h2>
       </FadeIn>

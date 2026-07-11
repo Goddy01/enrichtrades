@@ -18,7 +18,7 @@ export default function FeatureCard({ icon: Icon, title, description, delay = 0 
       <div>
         <div className="mb-3 flex items-center gap-2">
           <Icon className="h-4 w-4 text-candle" strokeWidth={1.5} />
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-bull sm:text-base">
+          <h3 className="text-sm font-medium uppercase tracking-wide text-bull sm:text-base">
             {title}
           </h3>
         </div>

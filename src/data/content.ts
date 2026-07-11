@@ -8,11 +8,11 @@ export const LINKS = {
 
 export const STATS = {
   followers: '32.3K',
-  whopRating: '4.9',
-  members: '1,346+',
-  reviews: '90',
   joined: 'November 2021',
-};
+  members: { value: 1346, suffix: '+' as const },
+  whopRating: { value: 4.9, decimals: 1 },
+  reviews: { value: 90 },
+} as const;
 
 export const HERO = {
   headingLine1: 'JOIN THE TOP 1%',

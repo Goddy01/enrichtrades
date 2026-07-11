@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion';
 import FadeIn from '../FadeIn';
-import { PRODUCTS, PRODUCTS_INTRO, STATS } from '../../data/content';
+import WhopStats from '../WhopStats';
+import { PRODUCTS, PRODUCTS_INTRO } from '../../data/content';
 import { EASE_OUT, hoverLift, tapPress } from '../../lib/motion';
 
 export default function ProductsSection() {
@@ -9,15 +10,10 @@ export default function ProductsSection() {
   return (
     <section
       id="products"
-      className="relative z-10 border-t border-bull/10 bg-cream px-5 py-20 sm:px-8 sm:py-24 md:px-10 md:py-32"
+      className="section-x section-y relative z-10 border-t border-bull/10 bg-cream"
     >
       <FadeIn delay={0} y={30}>
-        <h2
-          className="mb-6 text-center font-black uppercase text-bull sm:mb-8"
-          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
-        >
-          Products
-        </h2>
+        <h2 className="display-heading heading-gap text-center">Products</h2>
       </FadeIn>
 
       <FadeIn delay={0.1} y={20}>
@@ -27,8 +23,8 @@ export default function ProductsSection() {
         >
           {PRODUCTS_INTRO}
         </p>
-        <p className="mx-auto mb-14 max-w-xl text-center text-sm font-light uppercase tracking-widest text-bull/40 sm:mb-16">
-          {STATS.whopRating} on Whop · {STATS.reviews} reviews · Use code &quot;levels&quot; for a discount
+        <p className="section-meta mx-auto mb-14 max-w-xl text-center text-bull/40 sm:mb-16">
+          <WhopStats variant="products" />
         </p>
       </FadeIn>
 
@@ -41,11 +37,11 @@ export default function ProductsSection() {
               transition={{ duration: 0.4, ease: EASE_OUT }}
             >
               <div>
-                <h3 className="font-semibold uppercase leading-snug tracking-wide text-bull">
+                <h3 className="font-medium uppercase leading-snug tracking-wide text-bull">
                   {product.name}
                 </h3>
                 <div className="mt-5 flex flex-wrap items-baseline gap-1">
-                  <span className="font-mono text-3xl font-black text-candle sm:text-4xl">
+                  <span className="font-mono text-3xl font-bold tabular-nums text-candle sm:text-4xl">
                     {product.price}
                   </span>
                   {product.period && (
