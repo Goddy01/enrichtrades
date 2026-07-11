@@ -19,7 +19,7 @@ export default function HeroSection() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="hero-section relative z-10 flex min-h-[calc(100dvh-46px)] flex-col overflow-x-clip px-5 pb-6 pt-6 sm:min-h-screen sm:px-8 sm:pb-10 sm:pt-8 md:px-10">
+    <section className="hero-section relative z-10 flex min-h-[calc(100dvh-46px)] flex-col overflow-x-clip px-5 pb-8 pt-5 sm:min-h-screen sm:px-8 sm:pb-10 sm:pt-8 md:px-10">
       <div className="hero-bg pointer-events-none absolute inset-0 z-0" aria-hidden />
 
       <FadeIn delay={0} y={-16} duration={0.85} className="relative z-20">
@@ -68,7 +68,7 @@ export default function HeroSection() {
         </header>
       </FadeIn>
 
-      <div className="hero-content relative z-10 flex min-h-0 flex-1 flex-col justify-end pb-6 max-sm:translate-y-4 sm:translate-y-0 sm:justify-center sm:pb-0 lg:max-w-[42%] xl:max-w-[38%]">
+      <div className="hero-content relative z-10 flex min-h-0 flex-1 flex-col justify-start sm:justify-center lg:max-w-[42%] xl:max-w-[38%]">
         <h1 className="hero-heading-mobile font-black uppercase leading-[0.9] tracking-tight text-bull sm:leading-[0.92]">
           <RevealLines
             lines={[HERO.headingLine1, HERO.headingLine2]}
@@ -77,12 +77,12 @@ export default function HeroSection() {
         </h1>
 
         <FadeIn delay={0.55} y={20}>
-          <p className="hero-subheading mt-4 max-w-md sm:mt-6">
+          <p className="hero-subheading mt-3 max-w-md sm:mt-6">
             {HERO.subheading}
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.68} y={16} className="hero-cta mt-6 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6">
+        <FadeIn delay={0.68} y={16} className="hero-cta mt-5 flex w-full flex-col gap-3 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4 lg:gap-6">
           <ContactButton
             variant="primary"
             label={HERO.primaryCta}
