@@ -50,7 +50,12 @@ export default function MarqueeSection() {
       className="overflow-x-clip bg-cream pb-10 pt-24 sm:pt-32 md:pt-40"
     >
       <FadeIn delay={0} y={24} className="mb-10 px-5 text-center sm:mb-12 sm:px-8">
-        <p className="text-xs font-medium uppercase tracking-[0.3em] text-bull/45">Track Record</p>
+        <h2
+          className="font-black uppercase text-bull"
+          style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
+        >
+          Track Record
+        </h2>
       </FadeIn>
 
       <div className="flex flex-col gap-3">
