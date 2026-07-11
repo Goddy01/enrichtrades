@@ -20,7 +20,28 @@ export default function HeroSection() {
 
   return (
     <section className="hero-section relative z-10 flex min-h-[calc(100dvh-46px)] flex-col overflow-x-clip px-5 pb-8 pt-5 sm:min-h-screen sm:px-8 sm:pb-10 sm:pt-8 md:px-10">
-      <div className="hero-bg pointer-events-none absolute inset-0 z-0" aria-hidden />
+      <div className="hero-bg pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden>
+        {reduceMotion ? (
+          <img
+            src="/final-hero-image.png"
+            alt=""
+            className="hero-bg-media"
+            draggable={false}
+          />
+        ) : (
+          <video
+            className="hero-bg-media"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/final-hero-image.png"
+          >
+            <source src="/hero-section-video.mp4" type="video/mp4" />
+          </video>
+        )}
+      </div>
 
       <FadeIn delay={0} y={-16} duration={0.85} className="relative z-20">
         <header className="flex items-center justify-between gap-6">

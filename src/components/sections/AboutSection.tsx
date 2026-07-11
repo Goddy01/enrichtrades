@@ -42,7 +42,7 @@ export default function AboutSection() {
 
         <ScrollScale className="w-full max-w-4xl">
           <img
-            src="/discord-mockup.webp"
+            src="/discord-mockup-no-bg.webp"
             alt="Enrich Trades Whop community — profit updates and trade recaps"
             className="h-auto w-full select-none object-contain"
             draggable={false}
